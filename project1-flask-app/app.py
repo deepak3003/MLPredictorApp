@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-import pickle
+import joblib
 import os
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Load model
 model_path = "model.pkl"
 if os.path.exists(model_path):
-    model = pickle.load(open(model_path, "rb"))
+    model = joblib.load(open(model_path, "rb"))
 else:
     model = None
     print("❌ model.pkl not found!")
