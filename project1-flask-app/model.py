@@ -1,19 +1,16 @@
-import pandas as pd
+# save_model.py (run this in the same venv you're using now)
+
+import numpy as np
 from sklearn.linear_model import LinearRegression
-import joblib
+import pickle
 
-# Sample training data
-data = {
-    'area': [1000, 1500, 2000, 2500, 3000],
-    'price': [14400, 1570, 2700, 2507, 3700]
-}
-df = pd.DataFrame(data)
+# Dummy data
+X = np.array([[1], [2], [3], [4]])
+y = np.array([2, 4, 6, 8])
 
-# Train model
 model = LinearRegression()
-model.fit(df[['area']], df['price'])
+model.fit(X, y)
 
-# Save the model
-joblib.dump(model, 'model.pkl')
-
-print("✅ Model trained and saved as model.pkl")
+# Save the model safely
+with open("model.pkl", "wb") as f:
+    pickle.dump(model, f)
