@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House Price Predictor</title>
+</head>
+<body>
+  <h1>House Price Prediction</h1>
+  <form action="/predict" method="POST">
+    <label for="area">Enter Area (in sq ft):</label>
+    <input type="number" name="area" required>
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if prediction %}
+    <h2>Predicted Price: ₹{{ prediction }} Lakhs</h2>
+  {% endif %}
+</body>
+</html>

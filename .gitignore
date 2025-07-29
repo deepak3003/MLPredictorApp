@@ -1,0 +1,31 @@
+# Virtual environments anywhere in subfolders
+**/venv/
+**/env/
+**/.mlenv/
+
+# Python cache
+**/__pycache__/
+**/*.py[cod]
+**/*.pyo
+**/*.pyd
+
+# Jupyter checkpoints
+**/.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files
+**/*.pkl
+**/*.joblib
+
+# Environment variables
+**/.env
+
+# Render or build folders
+**/build/
+**/staticfiles/

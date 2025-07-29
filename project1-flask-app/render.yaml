@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: house-price-app
+    env: python
+    buildCommand: ""
+    startCommand: python app.py
