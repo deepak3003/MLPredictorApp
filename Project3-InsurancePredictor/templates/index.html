@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Predictor</title>
+</head>
+<body>
+    <h2>Will the person buy insurance?</h2>
+    <form action="/predict" method="post">
+        <label for="age">Enter Age:</label>
+        <input type="number" name="age" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
